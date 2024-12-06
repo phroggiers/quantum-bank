@@ -16,7 +16,10 @@ service:
                   gitFetchType: Branch
                   paths:
                     - .harness/kubernetes/progers-quantum-bank-backend-deployment.yaml
+                    - .harness/kubernetes/progers-quantum-bank-backend-service.yaml
                   branch: main
+              valuesPaths:
+                - .harness/kubernetes/progers-values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
   gitOpsEnabled: false
