@@ -1,1 +1,1 @@
-image: hsaab/quantum-bank-backend:<+pipeline.sequenceId>
+image: progers/quantum-bank-backend:<+pipeline.sequenceId>
