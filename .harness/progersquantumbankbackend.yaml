@@ -1,0 +1,24 @@
+service:
+  name: progers-quantum-bank-backend
+  identifier: progersquantumbankbackend
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: progersquantumbankbackenddeployment
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: progquantumbank
+                  gitFetchType: Branch
+                  paths:
+                    - .harness/kubernetes/progers-quantum-bank-backend-deployment.yaml
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+  gitOpsEnabled: false
+  orgIdentifier: SE_Sandbox
+  projectIdentifier: devX_super_team
